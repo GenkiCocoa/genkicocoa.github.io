@@ -2,10 +2,492 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>7utan</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>7utan.LIFE</title>
+<style>
+@charset "utf-8";
+body {
+	margin-left: auto;
+	margin-right: auto;
+	width: 92%;
+	max-width: 960px;
+	padding-left: 2.275%;
+	padding-right: 2.275%;
+}
+/* Header */
+header {
+	text-align: center;
+	display: block;
+}
+header .profileLogo .logoPlaceholder {
+	background-color: rgba(239,239,239,1.00);
+	width: 187px;
+	text-align: center;
+}
+header .logoPlaceholder span {
+	width: 80px;
+	height: 22px;
+	font-family: 'Montserrat', sans-serif;
+	color: rgba(255,255,255,1.00);
+	font-size: 30px;
+	font-weight: 700;
+	line-height: 53px;
+	text-align: left
+}
+header .profilePhoto {
+	background-color: rgba(239,239,239,1.00);
+	width: 259px;
+	border-radius: 50%;
+	height: 259px;
+	clear: both;
+}
+header .profileHeader h1 {
+	font-family: 'Montserrat', sans-serif;
+	color: rgba(146,146,146,1.00);
+	font-size: 30px;
+	font-weight: 700;
+	line-height: 24px;
+}
+header .profileHeader h3 {
+	font-family: sans-serif;
+	color: rgba(146,146,146,1.00);
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 24px;
+}
+hr {
+	background-color: rgba(208,207,207,1.00);
+	height: 1px;
+}
+header .profileHeader p {
+	font-family: sans-serif;
+	color: rgba(146,146,146,1.00);
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 1.8;
+	overflow-y: auto;
+}
+header .socialNetworkNavBar {
+	text-align: center;
+	display: block;
+	margin-top: 60px;
+	clear: both;
+}
+header .socialNetworkNavBar .socialNetworkNav {
+	border-radius: 50%;
+	cursor: pointer;
+}
+header .socialNetworkNavBar .socialNetworkNav img:hover {
+	opacity: 0.5;
+}
+/* Main Content sections */
+.mainContent .section1 {
+	display: block;
+}
+.section1 .sectionTitle, .section2 .sectionTitle {
+	font-family: 'Montserrat', sans-serif;
+	color: rgba(146,146,146,1.00);
+	font-size: 18px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+.section1 .sectionTitleRule, .section2 .sectionTitleRule {
+	margin: 0 3% 0 0;
+	float: left;
+	clear: both;
+}
+.section1 .sectionTitleRule2, .section2 .sectionTitleRule2 {
+	background-color: rgba(208,207,207,1.00);
+	height: 1px;
+	padding: 0px;
+}
+.mainContent .section1 .section1Content {
+	font-family: ProximaNova;
+	font-size: 14px;
+	font-weight: 100;
+	color: rgba(208,207,207,1.00);
+}
+.mainContent .section1 .section1Content span {
+	color: rgba(146,146,146,1.00);
+	font-family: sans-serif;
+}
+.section2 .sectionContentTitle {
+	font-family: sans-serif;
+	color: rgba(146,146,146,1.00);
+	font-size: 18px;
+	font-weight: 700;
+}
+.section2 .sectionContentSubTitle {
+	font-family: sans-serif;
+	color: rgba(68,67,67,1.00);
+	font-size: 14px;
+	font-weight: 400;
+}
+.section2 .sectionContent {
+	font-family: sans-serif;
+	color: rgba(146,146,146,1.00);
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 1.8;
+}
+.mainContent {
+	display: block;
+}
+.mainContent .externalResourcesNav .externalResources {
+	background-color: rgba(208,207,207,1.00);
+	display: inline-block;
+	text-align: center;
+	margin-top: 0px;
+	padding-top: 3%;
+	cursor: pointer;
+}
+.mainContent .externalResourcesNav .externalResources:hover {
+	background-color: rgba(153,153,153,1.00);
+}
+.externalResourcesNav .externalResources a {
+	font-family: 'Montserrat', sans-serif;
+	color: rgba(255,255,255,1.00);
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 18px;
+	text-decoration: none;
+}
+.stretch {
+	content: '';
+	display: inline-block;
+	margin-left: 2%;
+	margin-right: 2%;
+}
+/* Footer */
+footer .footerDisclaimer {
+	font-family: sans-serif;
+	font-size: 14px;
+	line-height: 18px;
+	color: rgba(104,103,103,1.00);
+	font-weight: 700;
+}
+footer .footerDisclaimer span {
+	color: rgba(181,178,178,1.00);
+	font-weight: 400;
+}
+footer .footerNote {
+	font-family: sans-serif;
+	font-size: 14px;
+	line-height: 18px;
+	color: rgba(104,103,103,1.00);
+	font-weight: 700;
+}
+footer .footerNote span {
+	color: rgba(181,178,178,1.00);
+	font-weight: 400;
+}
+
+/* Media query for Mobile devices*/
+@media only screen and (min-width : 285px) and (max-width : 480px) {
+/* Header */
+header {
+	width: 100%;
+	float: none;
+}
+header .profileLogo .logoPlaceholder {
+	display: inline-block;
+}
+header .profilePhoto {
+	display: inline-block;
+}
+header .profileHeader {
+	text-align: center;
+	margin-top: 10%;
+}
+header .profileHeader p {
+	text-align: justify;
+}
+header .socialNetworkNavBar {
+	text-align: center;
+	display: block;
+	margin-top: 60px;
+	clear: both;
+	margin-bottom: 15%;
+}
+header .socialNetworkNavBar .socialNetworkNav {
+	width: 60px;
+	height: 60px;
+	display: inline-block;
+	margin-right: 23px;
+}
+/* Main content sections */
+.mainContent .section1 {
+	text-align: center;
+	margin-bottom: 10%;
+}
+.section1 .section1Title, .section2 .section1Title {
+	text-align: center;
+}
+.section1 .sectionTitleRule, .section2 .sectionTitleRule {
+	width: 100%;
+}
+.section1 .sectionTitleRule2, .section2 .sectionTitleRule2 {
+	display: none;
+}
+.mainContent .section1 .section1Content {
+	display: inline-block;
+	text-align: left;
+	font-family: sans-serif;
+	text-align: justify;
+}
+.mainContent .section2 {
+	display: block;
+	text-align: center;
+}
+.section2 .section2Content {
+	margin-top: 10%;
+	text-align: justify;
+	margin-bottom: 10%;
+}
+.mainContent .externalResourcesNav {
+	margin-bottom: 10%;
+}
+.mainContent .externalResourcesNav .externalResources {
+	width: 100%;
+	height: 35px;
+}
+/* Footer */
+footer {
+	display: block;
+	text-align: center;
+	font-family: sans-serif;
+}
+}
+
+/* Media Query for Tablets */
+@media only screen and (min-width : 481px) and (max-width : 1024px) {
+/* Header */
+header {
+	width: 100%;
+	float: none;
+}
+header .profileLogo .logoPlaceholder {
+	display: inline-block;
+	font-family: 'Montserrat', sans-serif;
+}
+header .profilePhoto {
+	float: left;
+	clear: both;
+	margin-right: 3%;
+	margin-top: 5%;
+}
+header .profileHeader {
+	text-align: left;
+	margin-top: 7%;
+}
+header .socialNetworkNavBar .socialNetworkNav {
+	width: 74px;
+	height: 74px;
+	display: inline-block;
+	margin-right: 23px;
+}
+/* Main content and sections */
+.section1 .section1Title, .section2 .section1Title {
+	text-align: center;
+}
+.section1 .sectionTitleRule, .section2 .sectionTitleRule {
+	width: 100%;
+}
+.section1 .sectionTitleRule2, .section2 .sectionTitleRule2 {
+	display: none;
+}
+.mainContent .section1 .section1Content {
+	display: block;
+	margin: 0% 0% 0% 20%;
+	font-family: sans-serif;
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
+.mainContent .section2 {
+	clear: both;
+}
+.section2 .section2Content {
+	padding: 0px;
+	margin-left: 20%;
+	font-family: sans-serif;
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
+.mainContent .externalResourcesNav {
+	margin-left: 20%;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	text-align: center;
+	padding-top: 0px;
+	clear: both;
+}
+.mainContent .externalResourcesNav .externalResources {
+	width: 199px;
+	height: 48px;
+	margin-top: 5%;
+}
+/* Footer */
+footer .footerDisclaimer {
+	float: left;
+	margin-left: 3%;
+	font-family: sans-serif;
+}
+footer .footerNote {
+	float: right;
+	margin-right: 3%;
+	font-family: sans-serif;
+}
+}
+
+/* Desktops and laptops  */
+@media only screen and (min-width:1025px) {
+/* Header */
+header .profileLogo .logoPlaceholder {
+	float: left;
+	margin-bottom: 50px;
+}
+header .profilePhoto {
+	float: left;
+	clear: both;
+	margin-right: 3%;
+}
+header .profileHeader {
+	text-align: left;
+	padding-top: 10%;
+}
+header .socialNetworkNavBar .socialNetworkNav {
+	width: 74px;
+	height: 74px;
+	display: inline-block;
+	margin-right: 23px;
+}
+/* Main content sections */
+.section1 .sectionTitleRule, .section2 .sectionTitleRule {
+	width: 22.5%;
+}
+.mainContent .section1 .section1Content {
+	display: block;
+	margin-top: 0%;
+	margin-right: 0%;
+	margin-left: 26%;
+	margin-bottom: 0%;
+	font-family: sans-serif;
+}
+.mainContent .section2 {
+	clear: both;
+}
+.section2 .section2Content {
+	padding: 0px;
+	margin-left: 26%;
+	font-family: sans-serif;
+}
+.mainContent .externalResourcesNav {
+	margin-top: 40px;
+	margin-bottom: 40px;
+	text-align: center;
+	padding-top: 0px;
+	clear: both;
+}
+.mainContent .externalResourcesNav .externalResources {
+	width: 199px;
+	height: 48px;
+}
+/* Footer */
+footer .footerDisclaimer {
+	float: left;
+	margin-left: 3%;
+	font-family: sans-serif;
+}
+footer .footerNote {
+	float: right;
+	margin-right: 3%;
+	font-family: sans-serif;
+}
+}
+	
+</style>
+
+<!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.-->
+<script>var __adobewebfontsappname__="dreamweaver"</script><script src="http://use.edgefonts.net/montserrat:n4:default;source-sans-pro:n2:default.js" type="text/javascript"></script>
 </head>
-<iframe src="https://y.music.163.com/m/song?id=475279830" width="1080" height="2160" frameborder="0" name="nayuta-life" scrolling="no">   
-</iframe>
+
 <body>
+<!-- Header content -->
+<header>
+  <div>
+    <p class="logoPlaceholder"><img src="http://r.photo.store.qq.com/psc?/V520mqhj1DfABL0rKhZf1R3FA32vIXin/45NBuzDIW489QBoVep5mcZ97PKiZbNxOu9E5Q4Q4FxMRLynyJ4btulg5KpRGouoIDQkSLb9e1YfJrr7nmFYvP*U.5K0JMO7jcAI2UKEC8Ug!/r"width="210" height="36" alt="logo"></p>
+  </div>
+  <div class="profilePhoto"> 
+    <!-- Profile photo --> 
+    <img src="http://r.photo.store.qq.com/psc?/V14TXoEr193NWI/45NBuzDIW489QBoVep5mcanRlMo9Yey86sz2vNp4nLKVCfURYJOeraDJIuLkCL0le8RplZPDNDaK*e1DSG76UqOlRNjuqKUDL4h.Vy7x8BQ!/r" width="259" height="259"align="middle"> </div>
+  <!-- Identity details -->
+  <section class="profileHeader">
+    <h1>GenkiCocoa</h1>
+    <h3>生きてたの？生きでたよ...</h3>
+    <hr>
+    <p>数字媒体技术应用专业在校学生，自媒体运营方向有意者。平日多在网络上活动，以少女保登心爱作为个人形象，现实中表现的性格亦与该角色较为相符，外冷内热，因不以吃喝玩乐处朋友，人际情况比较糟糕。   最喜欢的歌手是nayuta（葉月なの），对于动画作品《CLANNAD》触动最深。&nbsp;</p>
+  </section>
+  <!-- Links to Social network accounts -->
+  <aside class="socialNetworkNavBar">
+    <div class="socialNetworkNav"> 
+      <!-- Add a Anchor tag with nested img tag here -->      </div>
+    <div class="socialNetworkNav"><a href="https://music.163.com/#/user/home?id=3964964228" target="_blank" title="网易云音乐"><img src="http://r.photo.store.qq.com/psc?/V14TXoEr193NWI/45NBuzDIW489QBoVep5mcZiGrNdGW6XM.ezh5smBrwiz2mUq6Np5x5pKEfzlcqE1MoubMIrpE14mfKEJDGCm9BqeHFfdLVyyemZMa5*uJEY!/r"  alt="网易云音乐"></a></div>
+    <div class="socialNetworkNav"><a href="https://qm.qq.com/cgi-bin/qm/qr?k=TebjJsBMA4DOP92TeyH2f31crBZW7tS8&noverify=0" target="_blank" title="网易云音乐"><img src="http://r.photo.store.qq.com/psc?/V14TXoEr193NWI/45NBuzDIW489QBoVep5mcTR7BwG2zIKTlXHiRLC21dvGqFMm64Lrj0WZ1d9bh1ohBFPQOW1JSIff2.KhWpXUHqi7Er6hi*JB5VXXpv8E.JE!/r"  alt="QQ"></a></div>
+    <div class="socialNetworkNav"><a href="https://music.163.com/#/artist?id=17401" target="_blank" title="奶油糖主页"><img src="http://r.photo.store.qq.com/psc?/V520mqhj1DfABL0rKhZf1R3FA32vIXin/45NBuzDIW489QBoVep5mccDBpzkivnw*eqjQbXvv9aHrT6AsMF4LLj4Zw5adFk6TmoaxvPtRsPHk8vZa56gsD8xJK36b0YNFgR4maoQ5F8Q!/r" alt="奶油糖主页"></a></div>
+  </aside>
+</header>
+<!-- content -->
+<section class="mainContent"> 
+  <!-- Contact details -->
+  <section class="section1">
+    <h2 class="sectionTitle">关于</h2>
+    <hr class="sectionTitleRule">
+    <hr class="sectionTitleRule2">
+    <div class="section1Content">
+      <p><span>性别:</span> &nbsp;保密</p>
+	  <p><span>地区:</span> &nbsp;福建,泉州</p>
+      <p><span>语言:</span> &nbsp;闽南语、汉语、日本语（在学）</p>
+      <p><span>星座:</span> &nbsp;水瓶座</p>
+	  <p><span>邮箱:</span> &nbsp;genkicocoa@outlook.com</p>
+    </div>
+  </section>
+  <!-- Previous experience details -->
+  <section class="section2">
+    <h2 class="sectionTitle">爱好</h2>
+    <hr class="sectionTitleRule">
+    <hr class="sectionTitleRule2">
+    <!-- First Title & company details  -->
+    <article class="section2Content">
+      <h2 class="sectionContentTitle">动画</h2>
+      <h3 class="sectionContentSubTitle">2018年5月至今</h3>
+      <p class="sectionContent">主食日常、百合、校园、青春、搞笑、治愈、致郁，不看中国动画及相关内容。</p>
+    </article>
+    <!-- Second Title & company details  -->
+    <article class="section2Content">
+      <h2 class="sectionContentTitle">音乐</h2>
+      <h3 class="sectionContentSubTitle">2020年2月至今</h3>
+      <p class="sectionContent">所喜欢的流派：动画及相关音乐、日本流行音乐、日本传统音乐、闽南语流行音乐等等，不听中文音乐。</p>
+    </article>
+    <article class="section2Content">
+      <h2 class="sectionContentTitle">数媒</h2>
+      <h3 class="sectionContentSubTitle">2018年7月至今</h3>
+      <p class="sectionContent">摄影摄像技术、图形图像处理（Ps）、特效制作与非线性编辑（Pr Ae Edius）</p>
+    </article>
+	  <!-- Replicate the above Div block to add more title and company details --> 
+  </section>
+  <!-- Links to expore your past projects and download your CV -->
+  <aside class="externalResourcesNav">
+    <div class="externalResources"> <a href="https://ml.7utan.life/" target="_blank" title="我的曲库">我的曲库&nbsp;</a> </div>
+    <span class="stretch"></span>
+    <div class="externalResources"><a href="https://bgm.tv/user/genkicocoa" target="_blank" title="我的观看">我的观看&nbsp;</a> </div>
+    <span class="stretch"></span>
+    <div class="externalResources"><a href="https://tsdm39.net/?fromuser=GenkiCocoa" target="_blank" title="天使动漫">天使动漫&nbsp;</a> </div>
+  </aside>
+</section>
+<footer>
+  <hr>
+  <p class="footerDisclaimer">2021&nbsp; Copyrights -7utan&nbsp; <span>All Rights Reserved</span></p>
+  <p class="footerNote">(´ω＇)ＺＹＬ大好き！！！</p>
+</footer>
 </body>
 </html>
